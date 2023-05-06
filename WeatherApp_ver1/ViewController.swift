@@ -17,9 +17,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBackground()
         // Do any additional setup after loading the view.
     }
-
+    func setBackground(){
+        var formatter = DateFormatter()
+        formatter.dateFormat = "HH"
+        let hourString = formatter.string(from: Date())
+        let hourInt = Int(hourString)!
+        if (6 <= hourInt) && (hourInt <= 18){
+            //light background
+            background.image = UIImage(named: "lightBackground")
+        }else{
+            background.image = UIImage(named: "darkBackground")
+        }
+    }
 
 }
 
