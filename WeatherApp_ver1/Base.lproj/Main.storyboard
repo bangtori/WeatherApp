@@ -117,6 +117,14 @@
                     <navigationItem key="navigationItem" id="vWD-N3-628">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yC6-fN-alx"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="background" destination="vWT-iZ-Jy3" id="6mW-OD-KE7"/>
+                        <outlet property="cityLabel" destination="fdc-G4-S07" id="DPr-De-GTl"/>
+                        <outlet property="tempMaxLabel" destination="aU8-Nc-TF0" id="Cdh-sQ-amg"/>
+                        <outlet property="tempMinLabel" destination="8Bh-hd-gYh" id="ZSy-Ac-ITg"/>
+                        <outlet property="temperatureLabel" destination="pDo-mF-PYl" id="sp5-aq-ly4"/>
+                        <outlet property="weatherIcon" destination="oGJ-Mn-Fwr" id="AxJ-aW-Cq2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
