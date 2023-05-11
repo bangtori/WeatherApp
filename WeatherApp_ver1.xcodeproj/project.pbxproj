@@ -15,6 +15,7 @@
 		53B48F3229FE579D003962DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B48F3029FE579D003962DE /* LaunchScreen.storyboard */; };
 		53B48F5E2A0CF547003962DE /* KeyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53B48F5D2A0CF547003962DE /* KeyList.plist */; };
 		53B48F602A0CF6D6003962DE /* WeatherApp++Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B48F5F2A0CF6D6003962DE /* WeatherApp++Bundle.swift */; };
+		53B48F622A0CF9FE003962DE /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B48F612A0CF9FE003962DE /* WeatherInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		53B48F3329FE579D003962DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53B48F5D2A0CF547003962DE /* KeyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KeyList.plist; sourceTree = "<group>"; };
 		53B48F5F2A0CF6D6003962DE /* WeatherApp++Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherApp++Bundle.swift"; sourceTree = "<group>"; };
+		53B48F612A0CF9FE003962DE /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				53B48F3329FE579D003962DE /* Info.plist */,
 				53B48F5D2A0CF547003962DE /* KeyList.plist */,
 				53B48F5F2A0CF6D6003962DE /* WeatherApp++Bundle.swift */,
+				53B48F612A0CF9FE003962DE /* WeatherInfo.swift */,
 			);
 			path = WeatherApp_ver1;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				53B48F602A0CF6D6003962DE /* WeatherApp++Bundle.swift in Sources */,
 				53B48F2A29FE579C003962DE /* ViewController.swift in Sources */,
 				53B48F2629FE579C003962DE /* AppDelegate.swift in Sources */,
+				53B48F622A0CF9FE003962DE /* WeatherInfo.swift in Sources */,
 				53B48F2829FE579C003962DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
