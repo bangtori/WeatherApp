@@ -13,6 +13,8 @@
 		53B48F2D29FE579C003962DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B48F2B29FE579C003962DE /* Main.storyboard */; };
 		53B48F2F29FE579D003962DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53B48F2E29FE579D003962DE /* Assets.xcassets */; };
 		53B48F3229FE579D003962DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B48F3029FE579D003962DE /* LaunchScreen.storyboard */; };
+		53B48F5E2A0CF547003962DE /* KeyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53B48F5D2A0CF547003962DE /* KeyList.plist */; };
+		53B48F602A0CF6D6003962DE /* WeatherApp++Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B48F5F2A0CF6D6003962DE /* WeatherApp++Bundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		53B48F2E29FE579D003962DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53B48F3129FE579D003962DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53B48F3329FE579D003962DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53B48F5D2A0CF547003962DE /* KeyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KeyList.plist; sourceTree = "<group>"; };
+		53B48F5F2A0CF6D6003962DE /* WeatherApp++Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherApp++Bundle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				53B48F2E29FE579D003962DE /* Assets.xcassets */,
 				53B48F3029FE579D003962DE /* LaunchScreen.storyboard */,
 				53B48F3329FE579D003962DE /* Info.plist */,
+				53B48F5D2A0CF547003962DE /* KeyList.plist */,
+				53B48F5F2A0CF6D6003962DE /* WeatherApp++Bundle.swift */,
 			);
 			path = WeatherApp_ver1;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53B48F5E2A0CF547003962DE /* KeyList.plist in Resources */,
 				53B48F3229FE579D003962DE /* LaunchScreen.storyboard in Resources */,
 				53B48F2F29FE579D003962DE /* Assets.xcassets in Resources */,
 				53B48F2D29FE579C003962DE /* Main.storyboard in Resources */,
@@ -138,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53B48F602A0CF6D6003962DE /* WeatherApp++Bundle.swift in Sources */,
 				53B48F2A29FE579C003962DE /* ViewController.swift in Sources */,
 				53B48F2629FE579C003962DE /* AppDelegate.swift in Sources */,
 				53B48F2829FE579C003962DE /* SceneDelegate.swift in Sources */,
