@@ -47,6 +47,11 @@ class ViewController: UIViewController {
 extension ViewController: WeatherManagerDelegate{
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherInfo) {
         DispatchQueue.main.async {
+            let url = URL(string: "https://openweathermap.org/img/wn/\(weather.weather.first?.icon ?? "00")@2x.png")
+            let data = try? Data(contentsOf: url!)
+            if let data = data {
+                self.weatherIcon.image = UIImage(data: data)
+            }
             self.cityLabel.text = weather.name
             self.temperatureLabel.text = "\(Int(weather.temp.temp - 273.15))°C"
             self.tempMaxLabel.text = "최고: \(Int(weather.temp.maxTemp - 273.15))°C"
