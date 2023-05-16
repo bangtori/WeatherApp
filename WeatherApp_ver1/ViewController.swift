@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         locationManger.requestWhenInUseAuthorization()
 
         func setBackground(){
-            var formatter = DateFormatter()
+            let formatter = DateFormatter()
             formatter.dateFormat = "HH"
             let hourString = formatter.string(from: Date())
             let hourInt = Int(hourString)!
