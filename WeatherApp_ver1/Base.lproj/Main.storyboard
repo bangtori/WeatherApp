@@ -137,12 +137,12 @@
         <!--도시 추가-->
         <scene sceneID="jTM-xc-kV4">
             <objects>
-                <viewController id="g8I-2T-y7g" sceneMemberID="viewController">
+                <viewController id="g8I-2T-y7g" customClass="AddPageViewController" customModule="WeatherApp_ver1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UqY-En-ncH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pcz-Ld-7b1">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pcz-Ld-7b1">
                                 <rect key="frame" x="15" y="118" width="363" height="700"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dlv-Gs-Tfy">
@@ -159,22 +159,25 @@
                                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="추가"/>
+                                                <connections>
+                                                    <action selector="addBtnClicked:" destination="g8I-2T-y7g" eventType="touchUpInside" id="Zfi-k9-TWr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WUM-Db-1f3">
-                                        <rect key="frame" x="0.0" y="54" width="361" height="646"/>
+                                        <rect key="frame" x="0.0" y="54" width="363" height="646"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="dTa-Rl-RpL" rowHeight="49" style="IBUITableViewCellStyleDefault" id="Wv6-cS-3Pd">
-                                                <rect key="frame" x="0.0" y="50" width="361" height="49"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" textLabel="vVG-9U-bJq" style="IBUITableViewCellStyleDefault" id="X3z-ik-nGk">
+                                                <rect key="frame" x="0.0" y="50" width="363" height="43.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wv6-cS-3Pd" id="7pF-Lp-xxN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="49"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X3z-ik-nGk" id="Jhz-Un-NKO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="363" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dTa-Rl-RpL">
-                                                            <rect key="frame" x="20" y="0.0" width="321" height="49"/>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vVG-9U-bJq">
+                                                            <rect key="frame" x="20" y="0.0" width="323" height="43.666667938232422"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                             <nil key="textColor"/>
@@ -184,6 +187,10 @@
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="g8I-2T-y7g" id="qrb-WG-OOZ"/>
+                                            <outlet property="delegate" destination="g8I-2T-y7g" id="lET-Sn-qaJ"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <constraints>
@@ -202,6 +209,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="도시 추가" id="ohD-Wc-ySW"/>
+                    <connections>
+                        <outlet property="cityInputTextField" destination="vAT-LT-86H" id="r9o-QU-T5B"/>
+                        <outlet property="tableView" destination="WUM-Db-1f3" id="eOq-qh-3Jr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVD-Yq-F9B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
