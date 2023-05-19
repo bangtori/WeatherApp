@@ -28,18 +28,18 @@ class ViewController: UIViewController {
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
         locationManger.requestLocation()
         locationManger.requestWhenInUseAuthorization()
-
-        func setBackground(){
-            let formatter = DateFormatter()
-            formatter.dateFormat = "HH"
-            let hourString = formatter.string(from: Date())
-            let hourInt = Int(hourString)!
-            if (6 <= hourInt) && (hourInt <= 18){
-                //light background
-                background.image = UIImage(named: "lightBackground")
-            }else{
-                background.image = UIImage(named: "darkBackground")
-            }
+        
+    }
+    func setBackground(){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH"
+        let hourString = formatter.string(from: Date())
+        let hourInt = Int(hourString)!
+        if (6 <= hourInt) && (hourInt <= 18){
+            //light background
+            background.image = UIImage(named: "lightBackground")
+        }else{
+            background.image = UIImage(named: "darkBackground")
         }
     }
     @IBAction func pageChange(_ sender: UIPageControl) {
