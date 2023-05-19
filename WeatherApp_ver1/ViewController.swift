@@ -57,7 +57,7 @@ class ViewController: UIViewController {
             print(pageControl.currentPage)
             weatherManager.fetchWeather(cityName: city[pageControl.currentPage-1])
         }else{
-            viewDidLoad()
+            locationManger.requestLocation()
         }
     }
 }
