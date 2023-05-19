@@ -49,6 +49,11 @@ extension AddPageViewController : UITableViewDelegate, UITableViewDataSource{
         cell.textLabel?.text = city[indexPath.row]
         return cell
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            city.remove(at: indexPath.row)
+        }
+    }
 }
 
 extension AddPageViewController : WeatherManagerDelegate{
