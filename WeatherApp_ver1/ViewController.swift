@@ -28,8 +28,11 @@ class ViewController: UIViewController {
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
         locationManger.requestLocation()
         locationManger.requestWhenInUseAuthorization()
+        loadData()
+        setPageController()
         
     }
+
     func setBackground(){
         let formatter = DateFormatter()
         formatter.dateFormat = "HH"
@@ -42,7 +45,20 @@ class ViewController: UIViewController {
             background.image = UIImage(named: "darkBackground")
         }
     }
+    func setPageController(){
+        print(city)
+        pageControl.numberOfPages = city.count + 1
+        pageControl.currentPage = 0
+        pageControl.pageIndicatorTintColor = UIColor.gray
+        pageControl.currentPageIndicatorTintColor = UIColor.green
+    }
     @IBAction func pageChange(_ sender: UIPageControl) {
+        if pageControl.currentPage != 0 {
+            print(pageControl.currentPage)
+            weatherManager.fetchWeather(cityName: city[pageControl.currentPage-1])
+        }else{
+            viewDidLoad()
+        }
     }
 }
     

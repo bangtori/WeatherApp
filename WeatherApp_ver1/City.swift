@@ -8,7 +8,7 @@
 import Foundation
 
 let userDefaults = UserDefaults.standard
-var city:[String] = []{
+var city:[String] = [String](){
     didSet{
         saveData()
     }
