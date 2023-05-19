@@ -16,10 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var tempMinLabel: UILabel!
     @IBOutlet weak var tempMaxLabel: UILabel!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     var locationManger = CLLocationManager()
     var weatherManager = WeatherManager()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
@@ -41,6 +41,8 @@ class ViewController: UIViewController {
                 background.image = UIImage(named: "darkBackground")
             }
         }
+    }
+    @IBAction func pageChange(_ sender: UIPageControl) {
     }
 }
     
