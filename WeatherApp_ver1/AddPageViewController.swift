@@ -11,14 +11,8 @@ class AddPageViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var cityInputTextField: UITextField!
-    let userDefaults = UserDefaults.standard
     var weatherManager = WeatherManager()
     
-    var city:[String] = []{
-        didSet{
-            self.saveData()
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
@@ -29,14 +23,6 @@ class AddPageViewController: UIViewController {
     @IBAction func addBtnClicked(_ sender: UIButton) {
         guard let searchCity = cityInputTextField.text else { return }
         weatherManager.fetchWeather(cityName: searchCity)
-    }
-    private func loadData(){
-        guard let data = userDefaults.stringArray(forKey: "city") else { return }
-        city = data
-    }
-    private func saveData(){
-        userDefaults.set(city, forKey: "city")
-        tableView.reloadData()
     }
 }
 extension AddPageViewController : UITableViewDelegate, UITableViewDataSource{
@@ -62,6 +48,7 @@ extension AddPageViewController : WeatherManagerDelegate{
         let data = weather.name
         city.append(data)
         cityInputTextField.text = ""
+        tableView.reloadData()
     }
     
     func didFailWithError(error: ErrorMessage) {
